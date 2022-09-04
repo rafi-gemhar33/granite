@@ -2,7 +2,7 @@ import React from "react";
 
 import classnames from "classnames";
 
-const PageLoader = ({ className = "" }) => {
+const PageLoader = ({ className = "" }) => (
   <div
     className={classnames(
       [className],
@@ -10,7 +10,7 @@ const PageLoader = ({ className = "" }) => {
     )}
   >
     <h1 className="text-lg leading-5">Loading...</h1>
-  </div>;
-};
+  </div>
+);
 
 export default PageLoader;

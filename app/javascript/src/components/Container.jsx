@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import NavBar from "components/NavBar";
 
-const Container = ({ children, className = "" }) => {
+const Container = ({ children, className = "" }) => (
   <>
     <NavBar />
     <div
@@ -15,8 +15,8 @@ const Container = ({ children, className = "" }) => {
     >
       <div className="mx-auto max-w-3xl">{children}</div>
     </div>
-  </>;
-};
+  </>
+);
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,

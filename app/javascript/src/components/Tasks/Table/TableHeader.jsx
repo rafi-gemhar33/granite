@@ -1,6 +1,6 @@
 import React from "react";
 
-const TableHeader = () => {
+const TableHeader = () => (
   <thead>
     <tr>
       <th className="w-1" />
@@ -18,7 +18,7 @@ const TableHeader = () => {
       </th>
       <th className="bg-gray-50 px-6 py-3" />
     </tr>
-  </thead>;
-};
+  </thead>
+);
 
 export default TableHeader;

@@ -12,7 +12,7 @@ const Input = ({
   disabled = false,
   required = true,
   className = "",
-}) => {
+}) => (
   <div className="mt-6">
     {label && (
       <label
@@ -36,8 +36,8 @@ const Input = ({
         onChange={onChange}
       />
     </div>
-  </div>;
-};
+  </div>
+);
 
 Input.propTypes = {
   type: PropTypes.string,

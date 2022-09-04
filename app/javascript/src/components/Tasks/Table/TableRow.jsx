@@ -2,7 +2,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-const TableRow = ({ data }) => {
+const TableRow = ({ data }) => (
   <tbody className="divide-y divide-gray-200 bg-white">
     {data.map(rowData => (
       <tr key={rowData.id}>
@@ -14,8 +14,8 @@ const TableRow = ({ data }) => {
         </td>
       </tr>
     ))}
-  </tbody>;
-};
+  </tbody>
+);
 
 TableRow.propTypes = {
   data: PropTypes.array.isRequired,
