@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  # include ActionController::MimeResponds
+  include ActionView::Helpers::TranslationHelper
 end
