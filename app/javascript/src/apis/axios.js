@@ -1,6 +1,6 @@
-import axios, { Axios } from "axios";
+import axios from "axios";
 
-axios.defaults.baseURL = '/'
+axios.defaults.baseURL = "/";
 
 export const setAuthHeaders = (setLoading = () => null) => {
   axios.defaults.headers = {
@@ -17,4 +17,4 @@ export const setAuthHeaders = (setLoading = () => null) => {
     axios.defaults.headers["X-Auth-Token"] = token;
   }
   setLoading(false);
-}
+};
