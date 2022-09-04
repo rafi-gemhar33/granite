@@ -12,3 +12,9 @@ Chapter: Adding Tasks controller
   As per Rails 5 release notes: https://github.com/rails/rails/blob/v5.0.0/actionpack/CHANGELOG.md
   Remove respond_to/respond_with placeholder methods, this functionality has been extracted to the responders gem.
   Add responders gem to your Gemfile.
+
+  ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve './src' in '/Users/rafi/Desktop/react-rails/granite/app/javascript/packs'
+resolve './src' in '/Users/rafi/Desktop/react-rails/granite/app/javascript/packs'
+  using description file: /Users/rafi/Desktop/react-rails/granite/package.json (relative path: ./app/javascript/packs)
+    Field 'browser' doesn't contain a valid alias configuration
