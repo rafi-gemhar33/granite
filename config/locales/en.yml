@@ -30,6 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  successfully_deleted: "Task was successfully Deleted!"
   successfully_created: "Task was successfully created!"
   successfully_updated: "Task was successfully updated!"
   task:
