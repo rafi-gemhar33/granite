@@ -8,7 +8,7 @@ import { setAuthHeaders, registerIntercepts } from "apis/axios";
 import { initializeLogger } from "common/logger";
 import Dashboard from "components/Dashboard";
 import PageLoader from "components/PageLoader";
-import CreateTask from "components/Tasks/Create";
+import { CreateTask, ShowTask } from "components/Tasks";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -31,10 +31,9 @@ const App = () => {
     <Router>
       <ToastContainer />
       <Switch>
+        <Route exact component={ShowTask} path="/tasks/:slug/show" />
         <Route exact component={CreateTask} path="/tasks/create" />
         <Route exact component={Dashboard} path="/dashboard" />
-        <Route exact path="/" render={() => <div>Home</div>} />
-        <Route exact path="/about" render={() => <div>About</div>} />
       </Switch>
     </Router>
   );
