@@ -1,0 +1,4 @@
+  validates :name, presence: true, length: { maximum: MAX_NAME_LENGTH }
+
+
+    add_foreign_key :tasks, :users, column: :assigned_user_id

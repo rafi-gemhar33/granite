@@ -1,1 +1,1 @@
-before_action :load_task!, except: :create
+before_action :load_task!, only: %i[show update]
