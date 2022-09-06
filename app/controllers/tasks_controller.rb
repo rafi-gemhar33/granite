@@ -15,17 +15,17 @@ class TasksController < ApplicationController
   def create
     task = Task.new(task_params)
     task.save!
-    respond_with_success t("successfully_created")
+    respond_with_success t("successfully_created", entity: "Task")
   end
 
   def update
     @task.update!(task_params)
-    respond_with_success t("successfully_updated")
+    respond_with_success t("successfully_updated", entity: "Task")
   end
 
   def destroy
     @task.destroy!
-    respond_with_success t("successfully_deleted")
+    respond_with_success t("successfully_deleted", entity: "Task")
   end
 
   private
