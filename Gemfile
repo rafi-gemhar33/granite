@@ -34,3 +34,11 @@ end
 group :test do
   gem "simplecov", require: false
 end
+
+group :development, :test do
+  # Rails integration for factory_bot, a replacement for fixtures
+  gem "factory_bot_rails"
+
+  # For auto-generating demo data
+  gem "faker"
+end
