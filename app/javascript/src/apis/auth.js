@@ -10,8 +10,11 @@ const login = payload =>
     login: payload,
   });
 
+const logout = () => axios.delete("/session");
+
 const authApi = {
   signup,
+  logout,
   login,
 };
 
