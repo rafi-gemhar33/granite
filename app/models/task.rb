@@ -3,6 +3,8 @@
 class Task < ApplicationRecord
   MAX_TITLE_LENGTH = 125
 
+  has_many :comments, dependent: :destroy
+
   belongs_to :assigned_user, class_name: "User", foreign_key: "assigned_user_id"
   belongs_to :task_owner, class_name: "User", foreign_key: "task_owner_id"
 

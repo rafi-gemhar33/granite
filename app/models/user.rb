@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :assigned_tasks, class_name: "Task", foreign_key: "assigned_user_id"
   has_many :created_tasks, class_name: "Task", foreign_key: "task_owner_id"
+  has_many :comments, dependent: :destroy
 
   has_secure_password
   has_secure_token :authentication_token
