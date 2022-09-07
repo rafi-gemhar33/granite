@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :assigned_tasks, class_name: "Task", foreign_key: "assigned_user_id"
   has_secure_password
+  has_secure_token :authentication_token
 
   validates :name, presence: true, length: { maximum: MAX_NAME_LENGTH }
   validates :email, presence: true,
