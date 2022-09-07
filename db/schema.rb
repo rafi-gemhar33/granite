@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_06_150904) do
+ActiveRecord::Schema.define(version: 2022_09_07_103943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2022_09_06_150904) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug", null: false
     t.integer "assigned_user_id"
+    t.integer "task_owner_id"
     t.index ["slug"], name: "index_tasks_on_slug", unique: true
   end
 
@@ -36,4 +37,5 @@ ActiveRecord::Schema.define(version: 2022_09_06_150904) do
   end
 
   add_foreign_key "tasks", "users", column: "assigned_user_id"
+  add_foreign_key "tasks", "users", column: "task_owner_id", on_delete: :cascade
 end
