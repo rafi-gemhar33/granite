@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 import Button from "components/Button";
 import Input from "components/Input";
 
-const Login = ({ handleSubmit, setEmail, setPassword, loading }) => (
+const Login = ({
+  handleSubmit,
+  setEmail,
+  setPassword,
+  loading,
+  email,
+  password,
+}) => (
   <div
     className="bg-gray-50 flex min-h-screen items-center
       justify-center px-4 py-12 sm:px-6 lg:px-8"
@@ -32,14 +39,14 @@ const Login = ({ handleSubmit, setEmail, setPassword, loading }) => (
           label="Email"
           placeholder="oliver@example.com"
           type="email"
-          value="oliver@example.com"
+          value={email}
           onChange={e => setEmail(e.target.value)}
         />
         <Input
           label="Password"
           placeholder="********"
           type="password"
-          value="welcome"
+          value={password}
           onChange={e => setPassword(e.target.value)}
         />
         <Button buttonText="Sign In" loading={loading} type="submit" />

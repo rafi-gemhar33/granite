@@ -15,12 +15,15 @@ gem "webpacker", "~> 5.0"
 
 gem "bcrypt", "~> 3.1.13"
 gem "bootsnap", ">= 1.4.4", require: false
+gem "pundit"
 gem "react-rails"
 gem "responders", "~> 3.0"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem "faker"
   gem "rubocop"
   gem "rubocop-rails"
 end
@@ -33,12 +36,4 @@ end
 
 group :test do
   gem "simplecov", require: false
-end
-
-group :development, :test do
-  # Rails integration for factory_bot, a replacement for fixtures
-  gem "factory_bot_rails"
-
-  # For auto-generating demo data
-  gem "faker"
 end

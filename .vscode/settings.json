@@ -6,7 +6,7 @@
   },
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  "editor.formatOnSave": true,
+  // "editor.formatOnSave": true,
   "yaml.format.enable": true,
   "ruby.useBundler": true, //run non-lint commands with bundle exec
   "ruby.useLanguageServer": true, // use the internal language server (see below)
@@ -17,5 +17,5 @@
       "rails": true // requires rubocop-rails gem for RuboCop >= 0.72.0
     }
   },
-  "ruby.format": "rubocop",
+  "ruby.format": "rubocop"
 }
