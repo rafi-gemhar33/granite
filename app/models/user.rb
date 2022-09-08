@@ -9,9 +9,6 @@ class User < ApplicationRecord
   has_many :created_tasks, class_name: "Task", foreign_key: "task_owner_id"
   has_many :comments, dependent: :destroy
 
-  has_secure_password
-  has_secure_token :authentication_token
-
   validates :name, presence: true, length: { maximum: MAX_NAME_LENGTH }
   validates :email, presence: true,
                     length: { maximum: MAX_EMAIL_LENGTH },
@@ -23,6 +20,9 @@ class User < ApplicationRecord
   before_save :set_email_downcase!
 
   before_destroy :assign_tasks_to_task_owners
+
+  has_secure_password
+  has_secure_token :authentication_token
 
   private
 
