@@ -33,3 +33,6 @@ end
 ```
 
 - 63.Handling idempotency when sending emails using Sidekiq - word-break: break-all;
+
+- https://www.bigbinary.com/books/learn-rubyonrails-book/marking-a-task-as-complete#adding-toggle-for-pending-completed-tasks
+-     <tbody className="divide-y divide-b-gray-600 bg-white">
