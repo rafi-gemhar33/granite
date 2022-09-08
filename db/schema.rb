@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_07_193223) do
+ActiveRecord::Schema.define(version: 2022_09_07_202255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2022_09_07_193223) do
     t.string "slug", null: false
     t.integer "assigned_user_id"
     t.integer "task_owner_id"
+    t.string "progress", default: "pending", null: false
     t.index ["slug"], name: "index_tasks_on_slug", unique: true
   end
 
