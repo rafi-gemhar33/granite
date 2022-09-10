@@ -18,6 +18,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "pundit"
 gem "react-rails"
 gem "responders", "~> 3.0"
+gem "sidekiq"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
@@ -37,3 +38,6 @@ end
 group :test do
   gem "simplecov", require: false
 end
+
+# gem 'bundler-audit', require: false
+# gem 'ruby_audit', require: false
