@@ -57,7 +57,7 @@ const NavBar = () => {
               hover:text-bb-gray-600 focus:text-bb-gray-700"
               onClick={handleLogout}
             >
-              LogOut
+              Logout
             </a>
           </div>
         </div>
