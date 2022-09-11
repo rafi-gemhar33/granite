@@ -16,6 +16,7 @@ module Granite
     config.active_job.queue_adapter = :sidekiq
     config.action_mailer.delivery_method = :letter_opener
     config.action_mailer.perform_deliveries = true
+    config.assets.initialize_on_precompile = false
 
     # Configuration for the application, engines, and railties goes here.
     #
