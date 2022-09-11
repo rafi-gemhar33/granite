@@ -96,4 +96,13 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     assert @task.starred?
     assert @task.completed?
   end
+
+  def test_not_found_error_rendered_for_invalid_task_slug
+    invalid_slug = "invalid-slug"
+
+    get task_path(invalid_slug), headers: @creator_headers
+    assert_response :not_found
+    response_json = response.parsed_body
+    assert_equal response_json["error"], t("not_found", entity: "Task")
+  end
 end
