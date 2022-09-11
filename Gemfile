@@ -19,6 +19,7 @@ gem "pundit"
 gem "react-rails"
 gem "responders", "~> 3.0"
 gem "sidekiq"
+gem "sidekiq-cron"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
@@ -30,6 +31,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "letter_opener"
   gem "listen", "~> 3.3"
   gem "spring"
   gem "web-console", ">= 4.1.0"

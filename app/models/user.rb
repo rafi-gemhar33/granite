@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :assigned_tasks, class_name: "Task", foreign_key: "assigned_user_id"
   has_many :created_tasks, class_name: "Task", foreign_key: "task_owner_id"
   has_many :comments, dependent: :destroy
+  has_many :user_notifications, dependent: :destroy, foreign_key: "user_id"
+
+  has_one :preference, dependent: :destroy, foreign_key: "user_id"
 
   validates :name, presence: true, length: { maximum: MAX_NAME_LENGTH }
   validates :email, presence: true,
@@ -18,6 +21,8 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, on: :create
 
   before_save :set_email_downcase!
+
+  before_create :build_default_preference
 
   before_destroy :assign_tasks_to_task_owners
 
@@ -35,5 +40,9 @@ class User < ApplicationRecord
       tasks_whose_owner_is_not_current_user.each do |task|
         task.update(assigned_user_id: task.task_owner_id)
       end
+    end
+
+    def build_default_preference
+      self.build_preference(notification_delivery_hour: Constants::DEFAULT_NOTIFICATION_DELIVERY_HOUR)
     end
 end
