@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+Dir[Rails.root.join("test/support/**/*.rb")].each { |f| require f }
+
 def enable_test_coverage
   require "simplecov"
   SimpleCov.start do
