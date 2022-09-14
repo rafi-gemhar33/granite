@@ -19,6 +19,8 @@ class Task < ApplicationRecord
   # after_create :log_task_details
   after_commit :log_task_details, on: :create
 
+  scope :accessible_to, ->(user_id) { where("task_owner_id = ? OR assigned_user_id = ?", user_id, user_id) }
+
   private
 
     def set_slug
