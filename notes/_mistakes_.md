@@ -36,3 +36,7 @@ end
 
 - https://www.bigbinary.com/books/learn-rubyonrails-book/marking-a-task-as-complete#adding-toggle-for-pending-completed-tasks
 -     <tbody className="divide-y divide-b-gray-600 bg-white">
+
+
+- https://www.bigbinary.com/books/learn-rubyonrails-book/generating-a-pdf-report
+- in_progress translation missing
